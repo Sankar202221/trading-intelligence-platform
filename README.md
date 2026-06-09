@@ -1,69 +1,41 @@
 # Trading Intelligence Platform
 ---
-A Binance-style product analytics platform that helps Product Managers analyze, optimize, and improve the complete Search → Trade user journey using data-driven insights, experimentation, and growth intelligence.
-
-
+A Binance-style product analytics platform that helps Product Managers understand, analyze, and optimize the complete Search → Trade journey using data-driven insights.
 
 ---
 
 ## Overview
 
-Trading Intelligence Platform is a product analytics and growth intelligence system designed to simulate the internal tooling used by modern cryptocurrency exchanges such as Binance.
+Trading Intelligence Platform is a product analytics and growth intelligence system designed to simulate the internal tooling used by modern cryptocurrency exchanges.
 
-The platform enables Product Managers to understand how users move through the trading journey, identify conversion bottlenecks, evaluate experiments, prioritize opportunities, and generate actionable recommendations.
+The platform enables product teams to analyze user behavior, identify conversion bottlenecks, evaluate experiments, monitor key business metrics, and prioritize opportunities that can improve trading activity and user engagement.
 
-Rather than focusing on trade execution itself, this project focuses on the product intelligence layer that drives business decisions.
-
----
-
-## Problem Statement
-
-Cryptocurrency exchanges process millions of user interactions every day.
-
-Users:
-
-- Search for assets
-- Browse token information
-- View order books
-- Analyze markets
-- Execute trades
-
-However, not every search results in a trade.
-
-Product teams need answers to questions like:
+By transforming raw user activity into actionable insights, the platform helps answer critical product questions such as:
 
 - Why are users searching but not trading?
-- Which assets have the highest opportunity for growth?
-- Where are users dropping off in the funnel?
-- Which product experiments improve conversion?
-- What should be prioritized next?
-
-This platform helps answer those questions through analytics and product intelligence.
+- Which assets have the highest growth potential?
+- Where are users dropping off in the trading funnel?
+- Which experiments improve conversion?
+- What opportunities should product teams prioritize?
 
 ---
 
-## Key Features
+## Features
 
 ### Search → Trade Funnel Analysis
 
-Analyze the complete trading journey:
+Analyze the complete user journey:
 
 ```text
-Search
-   ↓
-Token Page
-   ↓
-Order Book
-   ↓
-Trade
+Search → Token Page → Order Book → Trade
 ```
 
 Track:
 
-- Funnel conversion rates
-- Stage-wise drop-offs
-- Asset performance
-- User behavior patterns
+- Conversion Rates
+- Funnel Drop-offs
+- Asset Performance
+- User Journey Trends
 
 ---
 
@@ -88,20 +60,18 @@ Metrics:
 
 ### Cohort Analysis
 
-Track user retention and lifecycle trends.
-
-Measure:
+Track user retention and lifecycle trends:
 
 - Weekly Retention
 - Monthly Retention
 - Repeat Trading Activity
-- User Lifetime Value Signals
+- User Growth Trends
 
 ---
 
 ### Opportunity Scoring Engine
 
-Automatically identify high-impact opportunities.
+Automatically identify and rank product opportunities.
 
 Formula:
 
@@ -112,22 +82,10 @@ Search Demand × Conversion Gap × Business Impact
 
 Priority Levels:
 
-- P0 – Critical
-- P1 – High
-- P2 – Medium
-- P3 – Low
-
-Example:
-
-```text
-PEPE
-
-Search Volume ↑
-Conversion Rate ↓
-
-Result:
-High Priority Opportunity
-```
+- P0 — Critical
+- P1 — High
+- P2 — Medium
+- P3 — Low
 
 ---
 
@@ -136,16 +94,16 @@ High Priority Opportunity
 Evaluate product experiments through:
 
 - Conversion Lift Analysis
+- Experiment Performance Tracking
 - Statistical Comparison
 - User Engagement Measurement
-- Experiment Performance Tracking
 
 Example Experiments:
 
-- Search Page Redesign
+- Search Experience Improvements
 - Trending Assets Widget
-- New Trading CTA
-- Token Information Layout
+- Trading CTA Optimization
+- Token Information Enhancements
 
 ---
 
@@ -153,34 +111,34 @@ Example Experiments:
 
 Monitor exchange performance metrics:
 
-- Daily Active Users (DAU)
+- Daily Active Users
 - Search Volume
 - Trade Volume
 - Conversion Rate
 - Retention Rate
-- Revenue Metrics
+- Growth Metrics
 
 ---
 
 ### Trading Opportunity Discovery
 
-Automatically identify:
+Identify:
 
 - Trending Assets
 - Emerging User Interest
 - High Search / Low Conversion Assets
-- Growth Opportunities
+- Product Growth Opportunities
 
-Generate actionable product recommendations.
+Generate actionable recommendations for product teams.
 
 ---
 
 ### Automated PM Reports
 
-Generate weekly reports containing:
+Generate weekly product reports containing:
 
-- KPI Summary
-- Funnel Metrics
+- KPI Summaries
+- Funnel Performance
 - Growth Trends
 - Experiment Results
 - Product Recommendations
@@ -189,7 +147,7 @@ Generate weekly reports containing:
 
 ### Product Recommendation Engine
 
-Transform analytics into actionable decisions.
+Transform analytics into actionable product decisions.
 
 Example:
 
@@ -199,7 +157,7 @@ High search volume but low trade conversion.
 
 Recommendation:
 Improve token information visibility
-and simplify trade execution flow.
+and simplify trading flow.
 ```
 
 ---
@@ -216,43 +174,29 @@ Automatically generate Product Requirement Documents containing:
 
 ---
 
-## Architecture
+## Platform Workflow
 
 ```mermaid
-flowchart TD
+flowchart LR
 
-A[User Events & Trading Data]
-B[Data Processing Layer]
+A[User Activity]
+--> B[Data Collection]
 
-C[Funnel Analysis]
-D[Cohort Analysis]
-E[User Segmentation]
-F[Opportunity Scoring]
-G[Experiment Analysis]
+B --> C[Analytics Engine]
 
-H[Insight Engine]
+C --> D[Funnel Analysis]
+C --> E[Cohort Analysis]
+C --> F[User Segmentation]
+C --> G[Experiment Analysis]
 
-I[PM Reports]
-J[PRD Generator]
-K[Interactive Dashboard]
-
-A --> B
-
-B --> C
-B --> D
-B --> E
-B --> F
-B --> G
-
-C --> H
-D --> H
+D --> H[Product Insights]
 E --> H
 F --> H
 G --> H
 
-H --> I
-H --> J
-H --> K
+H --> I[PM Dashboard]
+H --> J[Reports]
+H --> K[Recommendations]
 ```
 
 ---
@@ -320,8 +264,6 @@ trading-intelligence-platform/
 │   ├── trades.csv
 │   └── experiments.csv
 │
-├── assets/
-│
 └── README.md
 ```
 
@@ -332,56 +274,56 @@ trading-intelligence-platform/
 | Metric | Description |
 |----------|------------|
 | Search Volume | Total asset searches |
-| Trade Volume | Completed trades |
+| Trade Volume | Total completed trades |
 | Conversion Rate | Search → Trade conversion |
 | Retention Rate | Returning users |
 | Engagement Score | User interaction depth |
 | Opportunity Score | Estimated business impact |
-| Experiment Lift | Improvement from A/B tests |
+| Experiment Lift | Improvement from A/B testing |
 
 ---
 
 ## Example Product Questions Answered
 
-### Funnel Optimization
+### Funnel Analysis
 
 - Where are users dropping off?
-- Which stage has the highest abandonment?
+- Which stage has the highest abandonment rate?
 
-### Conversion Analysis
+### Conversion Optimization
 
-- Which assets have the lowest conversion?
-- Which assets generate the most trading activity?
+- Which assets receive high interest but low conversion?
+- Which improvements could increase trading activity?
 
 ### User Behavior
 
 - Which user segments are most valuable?
-- Which cohorts retain best over time?
+- Which cohorts show the strongest retention?
 
-### Product Growth
+### Experiment Evaluation
 
-- Which opportunities should be prioritized?
-- Which experiments improve conversion?
+- Did a product change improve conversion?
+- What was the impact of the experiment?
 
 ---
 
 ## Sample Insight
 
 ```text
-Token: PEPE
+Asset: PEPE
 
 Search Volume:
-+220% WoW
++220% Week-over-Week
 
 Conversion Rate:
--18% WoW
+-18% Week-over-Week
 
-Observation:
+Insight:
 Users are discovering the asset but not completing trades.
 
 Recommendation:
-Improve token information visibility,
-market context, and trading entry points.
+Improve asset information visibility,
+market context, and trade entry points.
 ```
 
 ---
@@ -396,9 +338,9 @@ This project demonstrates:
 - Experiment Design
 - KPI Ownership
 - Product Prioritization
+- SQL Analytics
 - Data-Driven Decision Making
 - Exchange Product Strategy
-- SQL Analytics
 - Dashboard Development
 
 ---
@@ -406,10 +348,9 @@ This project demonstrates:
 ## Future Enhancements
 
 - Binance API Integration
-- CoinGecko API Integration
+- CoinGecko Market Data Integration
 - Search Intent Analytics
 - Predictive Conversion Models
-- ML-Based Opportunity Ranking
 - Real-Time Event Streaming
 - Personalized Trading Recommendations
 - Automated Alerting System
@@ -419,12 +360,10 @@ This project demonstrates:
 
 ## Why This Project?
 
-Modern exchanges succeed by understanding user behavior and continuously optimizing the path from discovery to execution.
+Modern cryptocurrency exchanges generate millions of user interactions every day. Understanding how users move from asset discovery to trade execution is critical for improving engagement, conversion, and revenue.
 
-Trading Intelligence Platform demonstrates how product teams use analytics, experimentation, and user insights to improve engagement, increase trading conversion, and make informed product decisions.
-
-The project combines product management, analytics, SQL, dashboarding, and growth strategy into a single platform that mirrors the type of internal tools used by leading crypto exchanges.
+Trading Intelligence Platform demonstrates how product teams leverage analytics, experimentation, and user behavior insights to make informed decisions, prioritize improvements, and drive sustainable product growth.
 
 ---
 
-### Built for Product Managers, Growth Teams, and Exchange Analytics.
+**Built to simulate the analytics and decision-making workflows used by product teams at leading cryptocurrency exchanges.**
