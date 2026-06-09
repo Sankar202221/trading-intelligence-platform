@@ -1,6 +1,6 @@
 # Trading Intelligence Platform
-
-> A Binance-style product analytics platform that helps Product Managers analyze, optimize, and improve the complete Search → Trade user journey using data-driven insights, experimentation, and growth intelligence.
+---
+A Binance-style product analytics platform that helps Product Managers analyze, optimize, and improve the complete Search → Trade user journey using data-driven insights, experimentation, and growth intelligence.
 
 
 
